@@ -12,14 +12,11 @@ import java.util.List;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-public class Seller extends BaseEntity{
+public class Seller extends User{
 
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "email", nullable = false, unique = true)
-    private String email;
 
     @Column(name = "phone", length = 13)
     private String phone;

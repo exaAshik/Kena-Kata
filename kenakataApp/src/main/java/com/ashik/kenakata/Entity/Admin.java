@@ -14,23 +14,13 @@ import java.time.Instant;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-public class Admin extends BaseEntity{
+public class Admin extends User{
 
     @Column(name = "username")
     private String username;
 
-    @Column(name = "email")
-    private String email;
-
-    @Column(name = "password")
-    private String password;
-
     @Column(name = "role")
     private String role;
-
-    @Column(name = "permissions", length = 255)
-    private String permissions;
 
     @Column(name = "last_login")
     private Instant lastLogin;

@@ -12,17 +12,13 @@ import java.util.List;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-public class Customer extends BaseEntity{
+public class Customer extends User{
 
     @Column(name = "first_name", nullable = false)
     private String firstName;
 
     @Column(name = "last_name", nullable = false)
     private String lastName;
-
-    @Column(name = "email", nullable = false, unique = true)
-    private String email;
 
     @Column(name = "phone_number", nullable = false, length = 13)
     private String phoneNumber;
@@ -36,7 +32,7 @@ public class Customer extends BaseEntity{
     @Column(name = "points", nullable = false)
     private Integer points = 0;
 
-    @Column(name = "points", nullable = false)
+    @Column(name = "role", nullable = false)
     private String role;
 
     @Column(name = "profile_image_url")
