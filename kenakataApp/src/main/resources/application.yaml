@@ -1,6 +1,8 @@
 spring:
   application:
     name: kenakata
+  profiles:
+    active: dev
   jpa:
     hibernate:
       ddl-auto: update

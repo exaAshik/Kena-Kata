@@ -1,7 +1,18 @@
 package com.ashik.kenakata.Entity;
 
-import jakarta.persistence.Column;
+import jakarta.persistence.*;
+import lombok.*;
 
+import java.util.List;
+
+@Entity
+@Table(name = "customers")
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Customer extends BaseEntity{
 
     @Column(name = "first_name", nullable = false)
@@ -27,4 +38,12 @@ public class Customer extends BaseEntity{
 
     @Column(name = "points", nullable = false)
     private String role;
+
+    @Column(name = "profile_image_url")
+    private String profileImageUrl;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "subscription_id")
+    private Subscription subscription;
+
 }
