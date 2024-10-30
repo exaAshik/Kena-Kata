@@ -19,9 +19,6 @@ public class Admin extends User{
     @Column(name = "username")
     private String username;
 
-    @Column(name = "role")
-    private String role;
-
     @Column(name = "last_login")
     private Instant lastLogin;
 

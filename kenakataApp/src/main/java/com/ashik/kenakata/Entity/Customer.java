@@ -32,9 +32,6 @@ public class Customer extends User{
     @Column(name = "points", nullable = false)
     private Integer points = 0;
 
-    @Column(name = "role", nullable = false)
-    private String role;
-
     @Column(name = "profile_image_url")
     private String profileImageUrl;
 
