@@ -12,6 +12,7 @@ import java.util.List;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Customer extends User{
 
     @Column(name = "first_name", nullable = false)

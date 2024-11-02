@@ -14,7 +14,6 @@ import lombok.*;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 public class User extends BaseEntity{
 
     @Column(name = "email", nullable = false, unique = true)

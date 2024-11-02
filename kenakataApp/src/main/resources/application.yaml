@@ -12,3 +12,14 @@ spring:
     username: "${SPRING_DATASOURCE_USERNAME:user}"
     password: "${SPRING_DATASOURCE_PASSWORD:password}"
     driver-class-name: "${SPRING_DATASOURCE_DRIVER_CLASS_NAME:com.mysql.cj.jdbc.Driver}"
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: "${SPRING_SMTP_USERNAME:user}"
+    password: "${SPRING_SMTP_PASSWORD:password}"
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true

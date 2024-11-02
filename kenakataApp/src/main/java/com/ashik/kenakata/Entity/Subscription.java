@@ -7,7 +7,7 @@ import java.time.Instant;
 
 
 @Entity
-@Table(name = "customers")
+@Table(name = "subscriptions")
 @Getter
 @Setter
 @ToString

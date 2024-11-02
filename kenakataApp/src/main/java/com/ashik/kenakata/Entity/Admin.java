@@ -14,6 +14,7 @@ import java.time.Instant;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Admin extends User{
 
     @Column(name = "username")

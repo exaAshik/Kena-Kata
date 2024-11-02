@@ -12,11 +12,11 @@ import java.util.List;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Seller extends User{
 
     @Column(name = "name", nullable = false)
     private String name;
-
 
     @Column(name = "phone", length = 13)
     private String phone;
