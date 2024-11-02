@@ -1,10 +1,25 @@
 spring:
+  application:
+    name: kenakata
+  profiles:
+    active: dev
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
   datasource:
-    url: jdbc:mysql://localhost:3306/kenakata
-    username: root
-    password: password
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: "${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/kenakata}"
+    username: "${SPRING_DATASOURCE_USERNAME:user}"
+    password: "${SPRING_DATASOURCE_PASSWORD:password}"
+    driver-class-name: "${SPRING_DATASOURCE_DRIVER_CLASS_NAME:com.mysql.cj.jdbc.Driver}"
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: "${SPRING_SMTP_USERNAME:user}"
+    password: "${SPRING_SMTP_PASSWORD:password}"
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
