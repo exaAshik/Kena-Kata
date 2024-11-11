@@ -12,6 +12,12 @@ import java.util.List;
 @Data
 public class SellerDto {
 
+    private Long id;
+
+    private String email;
+
+    private String password;
+
     private String name;
 
     private String phone;

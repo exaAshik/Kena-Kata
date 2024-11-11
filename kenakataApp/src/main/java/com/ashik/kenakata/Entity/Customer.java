@@ -15,13 +15,13 @@ import java.util.List;
 @Builder
 public class Customer extends User{
 
-    @Column(name = "first_name", nullable = false)
+    @Column(name = "first_name")
     private String firstName;
 
-    @Column(name = "last_name", nullable = false)
+    @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "phone_number", nullable = false, length = 13)
+    @Column(name = "phone_number",length = 13)
     private String phoneNumber;
 
     @Column(name = "address", length = 300)
@@ -30,7 +30,7 @@ public class Customer extends User{
     @Column(name = "city", length = 100)
     private String city;
 
-    @Column(name = "points", nullable = false)
+    @Column(name = "points")
     private Integer points = 0;
 
     @Column(name = "profile_image_url")

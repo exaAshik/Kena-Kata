@@ -22,6 +22,12 @@ public class User extends BaseEntity{
     @Column(name = "password")
     private String password;
 
+    @Column(name = "username")
+    private String userName;
+
     @Column(name = "role", nullable = false)
     private RoleType role;
+
+    @Column(name = "is_Auth2_login")
+    private boolean isAuth2Login;
 }
