@@ -81,7 +81,7 @@ public class Oauth2SuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
         customer.setEmail(email);
         customer.setUserName(name);
         customer.setRole(RoleType.CUSTOMER);
-        customer.setActive(true);
+        customer.setActive(false);
         customer.setAuth2Login(true);
         customer.setPassword(AppConstant.SSO_DEFAULT_PASSWORD);
 

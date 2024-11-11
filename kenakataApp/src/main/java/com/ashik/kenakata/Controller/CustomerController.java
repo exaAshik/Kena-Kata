@@ -22,6 +22,7 @@ public class CustomerController {
     public ResponseEntity<?> createCustomer(@RequestBody CustomerCreateDto customerCreateDto) {
 
         Customer customer = CustomerMapper.INSTANCE.customerCreateDtoToCustomer(customerCreateDto);
+        System.out.println(customer);
         customer.setPassword(customerCreateDto.getPassword());
         customer.setEmail(customerCreateDto.getEmail());
 

@@ -19,7 +19,8 @@ public class SellerServiceImplementation implements SellerService {
 
     @Override
     public Seller saveSeller(Seller seller) {
-
+        seller.setActive(false);
+        seller.setAuth2Login(false);
         return userRepository.save(seller);
     }
 
